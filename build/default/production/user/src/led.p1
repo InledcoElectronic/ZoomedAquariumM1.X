@@ -16,22 +16,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 "24 user/src/../inc/../../driver/inc/flash.h
 [v _FLASH_ReadBuffer `(v ~T0 @X0 0 ef3`*uc`ui`uc ]
 [v F4267 `(v ~T0 @X0 1 tf1`ul ]
-"152 /Applications/microchip/xc8/v1.40/include/pic.h
+"152 D:\Program Files\Microchip\xc8\v1.41\include\pic.h
 [v __delay `JF4267 ~T0 @X0 0 e ]
 [p i __delay ]
-"38 user/src/../inc/audio.h
+"35 user/src/../inc/audio.h
 [v _Audio_StopSound `(v ~T0 @X0 0 ef ]
-"41
+"38
 [v _Audio_SetVolume `(v ~T0 @X0 0 ef1`uc ]
-"40
+"37
 [v _Audio_SetPlayMode `(v ~T0 @X0 0 ef1`uc ]
-"72 user/src/../inc/led.h
+"73 user/src/../inc/led.h
 [v _Led_TurnOffRamp `(v ~T0 @X0 0 ef ]
-"69
-[v _Led_TurnOnAllRamp `(v ~T0 @X0 0 ef ]
 "70
-[v _Led_TurnOnWhiteRamp `(v ~T0 @X0 0 ef ]
+[v _Led_TurnOnAllRamp `(v ~T0 @X0 0 ef ]
 "71
+[v _Led_TurnOnWhiteRamp `(v ~T0 @X0 0 ef ]
+"72
 [v _Led_TurnOnBlueRamp `(v ~T0 @X0 0 ef ]
 "22 user/src/../inc/../../driver/inc/flash.h
 [v _FLASH_WriteBlock `(uc ~T0 @X0 0 ef2`ui`*uc ]
@@ -39,9 +39,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _Util_IncValue `(v ~T0 @X0 0 ef3`*ui`ui`ui ]
 "19
 [v _Util_DecValue `(v ~T0 @X0 0 ef3`*ui`ui`ui ]
-"39 user/src/../inc/audio.h
+"36 user/src/../inc/audio.h
 [v _Audio_SelectSound `(v ~T0 @X0 0 ef1`uc ]
-"35
+"32
 [v _audio_value `Vui ~T0 @X0 0 e ]
 "38 user/src/../inc/key.h
 [v _Key_Scan `(v ~T0 @X0 0 ef ]
@@ -158,7 +158,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;pic16f1508.h: 49: extern volatile unsigned char INDF0 @ 0x000;
-"51 /Applications/microchip/xc8/v1.40/include/pic16f1508.h
+"51 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [; ;pic16f1508.h: 51: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1508.h: 54: typedef union {
@@ -4074,23 +4074,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;led.h: 62: extern volatile LedPara_t gLedPara;
 [; ;led.h: 63: extern volatile LedRunPara_t gLedRunPara;
 [; ;led.h: 65: extern void Led_InitPara();
-[; ;led.h: 66: extern void Led_Initialize();
-[; ;led.h: 67: extern void Led_SaveParaIfChanged();
-[; ;led.h: 68: extern void Led_UpdateBright();
-[; ;led.h: 69: extern void Led_TurnOnAllRamp();
-[; ;led.h: 70: extern void Led_TurnOnWhiteRamp();
-[; ;led.h: 71: extern void Led_TurnOnBlueRamp();
-[; ;led.h: 72: extern void Led_TurnOffRamp();
-[; ;led.h: 73: extern void Led_OnKeyPressed(uint8_t key);
-[; ;led.h: 74: extern void Led_Ramp();
-[; ;led.h: 75: extern void Led_Run();
-[; ;audio.h: 35: extern volatile uint16_t audio_value;
-[; ;audio.h: 37: extern void Audio_PlaySound();
-[; ;audio.h: 38: extern void Audio_StopSound();
-[; ;audio.h: 39: extern void Audio_SelectSound(uint8_t index);
-[; ;audio.h: 40: extern void Audio_SetPlayMode(uint8_t type);
-[; ;audio.h: 41: extern void Audio_SetVolume(uint8_t vol);
-[; ;audio.h: 42: extern void Audio_GetValue();
+[; ;led.h: 66: extern void Audio_Initialize();
+[; ;led.h: 67: extern void Led_Initialize();
+[; ;led.h: 68: extern void Led_SaveParaIfChanged();
+[; ;led.h: 69: extern void Led_UpdateBright();
+[; ;led.h: 70: extern void Led_TurnOnAllRamp();
+[; ;led.h: 71: extern void Led_TurnOnWhiteRamp();
+[; ;led.h: 72: extern void Led_TurnOnBlueRamp();
+[; ;led.h: 73: extern void Led_TurnOffRamp();
+[; ;led.h: 74: extern void Led_OnKeyPressed(uint8_t key);
+[; ;led.h: 75: extern void Led_Ramp();
+[; ;led.h: 76: extern void Led_Run();
+[; ;audio.h: 32: extern volatile uint16_t audio_value;
+[; ;audio.h: 34: extern void Audio_PlaySound();
+[; ;audio.h: 35: extern void Audio_StopSound();
+[; ;audio.h: 36: extern void Audio_SelectSound(uint8_t index);
+[; ;audio.h: 37: extern void Audio_SetPlayMode(uint8_t type);
+[; ;audio.h: 38: extern void Audio_SetVolume(uint8_t vol);
+[; ;audio.h: 39: extern void Audio_GetValue();
 [; ;key.h: 33: typedef void (*Key_Press_t)( uint8_t key );
 [; ;key.h: 34: typedef void (*Key_Idle_t)();
 [; ;key.h: 36: extern volatile uint8_t keyValue;
@@ -4242,931 +4243,944 @@ Version 3.2 HI-TECH Software Intermediate Code
 "46
 [e :UE 452 ]
 }
-"48
-[v _Led_Initialize `(v ~T0 @X0 1 ef ]
+"47
+[v _Audio_Initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;led.c: 48: void Led_Initialize() {
-[e :U _Led_Initialize ]
+[; ;led.c: 47: void Audio_Initialize(){
+[e :U _Audio_Initialize ]
 [f ]
-[; ;led.c: 49: _delay((unsigned long)((480)*(16000000/4000.0)));
+[; ;led.c: 48: _delay((unsigned long)((640)*(16000000/4000.0)));
+"48
+[e ( __delay (1 -> * -> -> 640 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;led.c: 49: asm("clrwdt");
 "49
-[e ( __delay (1 -> * -> -> 480 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; <" clrwdt ;# ">
 [; ;led.c: 50: Audio_StopSound();
 "50
 [e ( _Audio_StopSound ..  ]
-[; ;led.c: 51: _delay((unsigned long)((48)*(16000000/4000.0)));
+[; ;led.c: 51: _delay((unsigned long)((480)*(16000000/4000.0)));
 "51
-[e ( __delay (1 -> * -> -> 48 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 480 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 [; ;led.c: 52: Audio_SetVolume(gLedPara.mVolOn ? VOLUME[ gLedPara.mVolume ] : 0);
 "52
 [e ( _Audio_SetVolume (1 -> ? != -> . . _gLedPara 0 2 `i -> -> -> 0 `i `Vuc `i : -> *U + &U _VOLUME * -> . . _gLedPara 0 3 `ux -> -> # *U &U _VOLUME `ui `ux `i -> 0 `i `uc ]
-[; ;led.c: 53: _delay((unsigned long)((48)*(16000000/4000.0)));
+[; ;led.c: 53: _delay((unsigned long)((480)*(16000000/4000.0)));
 "53
-[e ( __delay (1 -> * -> -> 48 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;led.c: 54: Audio_SetPlayMode(0x02);
+[e ( __delay (1 -> * -> -> 480 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;led.c: 54: Audio_SetPlayMode(0x01);
 "54
-[e ( _Audio_SetPlayMode (1 -> -> 2 `i `uc ]
-[; ;led.c: 55: _delay((unsigned long)((48)*(16000000/4000.0)));
+[e ( _Audio_SetPlayMode (1 -> -> 1 `i `uc ]
+[; ;led.c: 55: _delay((unsigned long)((480)*(16000000/4000.0)));
 "55
-[e ( __delay (1 -> * -> -> 48 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;led.c: 56: if (!gLedPara.mOn) {
+[e ( __delay (1 -> * -> -> 480 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;led.c: 56: }
 "56
-[e $ ! ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 462  ]
-{
-[; ;led.c: 57: Led_TurnOffRamp();
-"57
-[e ( _Led_TurnOffRamp ..  ]
-"58
-}
-[; ;led.c: 58: } else {
-[e $U 463  ]
-[e :U 462 ]
-{
-[; ;led.c: 59: gLedRunPara.music_state = 0;
-"59
-[e = . _gLedRunPara 3 -> -> 0 `i `uc ]
-[; ;led.c: 60: switch (gLedPara.mMode) {
-"60
-[e $U 465  ]
-{
-[; ;led.c: 61: case 0:
-"61
-[e :U 466 ]
-[; ;led.c: 62: Led_TurnOnAllRamp();
-"62
-[e ( _Led_TurnOnAllRamp ..  ]
-[; ;led.c: 63: break;
-"63
-[e $U 464  ]
-[; ;led.c: 64: case 1:
-"64
-[e :U 467 ]
-[; ;led.c: 65: Led_TurnOnWhiteRamp();
-"65
-[e ( _Led_TurnOnWhiteRamp ..  ]
-[; ;led.c: 66: break;
-"66
-[e $U 464  ]
-[; ;led.c: 67: case 2:
-"67
-[e :U 468 ]
-[; ;led.c: 68: Led_TurnOnBlueRamp();
-"68
-[e ( _Led_TurnOnBlueRamp ..  ]
-[; ;led.c: 69: break;
-"69
-[e $U 464  ]
-[; ;led.c: 70: default:
-"70
-[e :U 469 ]
-[; ;led.c: 71: break;
-"71
-[e $U 464  ]
-"72
-}
-[; ;led.c: 72: }
-[e $U 464  ]
-"60
-[e :U 465 ]
-[e [\ . . _gLedPara 0 1 , $ -> -> 0 `i `uc 466
- , $ -> -> 1 `i `uc 467
- , $ -> -> 2 `i `uc 468
- 469 ]
-"72
-[e :U 464 ]
-"73
-}
-[e :U 463 ]
-[; ;led.c: 73: }
-[; ;led.c: 74: }
-"74
 [e :UE 461 ]
 }
+"57
+[v _Led_Initialize `(v ~T0 @X0 1 ef ]
+{
+[; ;led.c: 57: void Led_Initialize() {
+[e :U _Led_Initialize ]
+[f ]
+[; ;led.c: 58: if (!gLedPara.mOn) {
+"58
+[e $ ! ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 463  ]
+{
+[; ;led.c: 59: Led_TurnOffRamp();
+"59
+[e ( _Led_TurnOffRamp ..  ]
+"60
+}
+[; ;led.c: 60: } else {
+[e $U 464  ]
+[e :U 463 ]
+{
+[; ;led.c: 61: gLedRunPara.music_state = 0;
+"61
+[e = . _gLedRunPara 3 -> -> 0 `i `uc ]
+[; ;led.c: 62: switch (gLedPara.mMode) {
+"62
+[e $U 466  ]
+{
+[; ;led.c: 63: case 0:
+"63
+[e :U 467 ]
+[; ;led.c: 64: Led_TurnOnAllRamp();
+"64
+[e ( _Led_TurnOnAllRamp ..  ]
+[; ;led.c: 65: break;
+"65
+[e $U 465  ]
+[; ;led.c: 66: case 1:
+"66
+[e :U 468 ]
+[; ;led.c: 67: Led_TurnOnWhiteRamp();
+"67
+[e ( _Led_TurnOnWhiteRamp ..  ]
+[; ;led.c: 68: break;
+"68
+[e $U 465  ]
+[; ;led.c: 69: case 2:
+"69
+[e :U 469 ]
+[; ;led.c: 70: Led_TurnOnBlueRamp();
+"70
+[e ( _Led_TurnOnBlueRamp ..  ]
+[; ;led.c: 71: break;
+"71
+[e $U 465  ]
+[; ;led.c: 72: default:
+"72
+[e :U 470 ]
+[; ;led.c: 73: break;
+"73
+[e $U 465  ]
+"74
+}
+[; ;led.c: 74: }
+[e $U 465  ]
+"62
+[e :U 466 ]
+[e [\ . . _gLedPara 0 1 , $ -> -> 0 `i `uc 467
+ , $ -> -> 1 `i `uc 468
+ , $ -> -> 2 `i `uc 469
+ 470 ]
+"74
+[e :U 465 ]
+"75
+}
+[e :U 464 ]
+[; ;led.c: 75: }
+[; ;led.c: 76: }
 "76
+[e :UE 462 ]
+}
+"78
 [v _Led_SaveParaIfChanged `(v ~T0 @X0 1 ef ]
 {
-[; ;led.c: 76: void Led_SaveParaIfChanged() {
+[; ;led.c: 78: void Led_SaveParaIfChanged() {
 [e :U _Led_SaveParaIfChanged ]
 [f ]
-[; ;led.c: 77: if (gLedRunPara.mParaChanged) {
-"77
-[e $ ! != -> . _gLedRunPara 2 `i -> -> -> 0 `i `Vuc `i 471  ]
-{
-[; ;led.c: 78: gLedRunPara.mParaChanged = 0;
-"78
-[e = . _gLedRunPara 2 -> -> 0 `i `uc ]
-[; ;led.c: 79: FLASH_WriteBlock(0xFC0, (uint8_t *) & gLedPara);
+[; ;led.c: 79: if (gLedRunPara.mParaChanged) {
 "79
-[e ( _FLASH_WriteBlock (2 , -> -> 4032 `i `ui -> &U _gLedPara `*uc ]
+[e $ ! != -> . _gLedRunPara 2 `i -> -> -> 0 `i `Vuc `i 472  ]
+{
+[; ;led.c: 80: gLedRunPara.mParaChanged = 0;
 "80
-}
-[e :U 471 ]
-[; ;led.c: 80: }
-[; ;led.c: 81: }
+[e = . _gLedRunPara 2 -> -> 0 `i `uc ]
+[; ;led.c: 81: _delay((unsigned long)((8)*(16000000/4000.0)));
 "81
-[e :UE 470 ]
-}
+[e ( __delay (1 -> * -> -> 8 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;led.c: 82: FLASH_WriteBlock(0xFC0, (uint8_t *) & gLedPara);
+"82
+[e ( _FLASH_WriteBlock (2 , -> -> 4032 `i `ui -> &U _gLedPara `*uc ]
 "83
+}
+[e :U 472 ]
+[; ;led.c: 83: }
+[; ;led.c: 84: }
+"84
+[e :UE 471 ]
+}
+"86
 [v _Led_UpdateBright `(v ~T0 @X0 1 ef ]
 {
-[; ;led.c: 83: void Led_UpdateBright() {
+[; ;led.c: 86: void Led_UpdateBright() {
 [e :U _Led_UpdateBright ]
 [f ]
-[; ;led.c: 84: for (uint8_t i = 0; i < 2; i++) {
-"84
+[; ;led.c: 87: for (uint8_t i = 0; i < 2; i++) {
+"87
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 2 `i 473  ]
-[e $U 474  ]
-[e :U 473 ]
-{
-[; ;led.c: 85: loadDuty[i](gLedRunPara.mCurrentBright[i]);
-"85
-[e ( *U *U + &U _loadDuty * -> _i `ux -> -> # *U &U _loadDuty `ui `ux (1 *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux ]
-"86
-}
-"84
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 2 `i 473  ]
+[e $ < -> _i `i -> 2 `i 474  ]
+[e $U 475  ]
 [e :U 474 ]
-"86
-}
-[; ;led.c: 86: }
-[; ;led.c: 87: }
-"87
-[e :UE 472 ]
-}
+{
+[; ;led.c: 88: loadDuty[i](gLedRunPara.mCurrentBright[i]);
+"88
+[e ( *U *U + &U _loadDuty * -> _i `ux -> -> # *U &U _loadDuty `ui `ux (1 *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux ]
 "89
+}
+"87
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 2 `i 474  ]
+[e :U 475 ]
+"89
+}
+[; ;led.c: 89: }
+[; ;led.c: 90: }
+"90
+[e :UE 473 ]
+}
+"92
 [v _Led_TurnOnAllRamp `(v ~T0 @X0 1 ef ]
 {
-[; ;led.c: 89: void Led_TurnOnAllRamp() {
+[; ;led.c: 92: void Led_TurnOnAllRamp() {
 [e :U _Led_TurnOnAllRamp ]
 [f ]
-[; ;led.c: 90: gLedPara.mOn = 1;
-"90
+[; ;led.c: 93: gLedPara.mOn = 1;
+"93
 [e = . . _gLedPara 0 0 -> -> 1 `i `uc ]
-[; ;led.c: 91: for (uint8_t i = 0; i < 2; i++) {
-"91
+[; ;led.c: 94: for (uint8_t i = 0; i < 2; i++) {
+"94
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 2 `i 477  ]
-[e $U 478  ]
-[e :U 477 ]
-{
-[; ;led.c: 92: gLedRunPara.mTargetBright[i] = gLedPara.all_bright;
-"92
-[e = *U + &U . _gLedRunPara 1 * -> _i `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux . . _gLedPara 0 4 ]
-"93
-}
-"91
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 2 `i 477  ]
+[e $ < -> _i `i -> 2 `i 478  ]
+[e $U 479  ]
 [e :U 478 ]
-"93
-}
-[; ;led.c: 93: }
-[; ;led.c: 94: }
-"94
-[e :UE 476 ]
-}
+{
+[; ;led.c: 95: gLedRunPara.mTargetBright[i] = gLedPara.all_bright;
+"95
+[e = *U + &U . _gLedRunPara 1 * -> _i `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux . . _gLedPara 0 4 ]
 "96
+}
+"94
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 2 `i 478  ]
+[e :U 479 ]
+"96
+}
+[; ;led.c: 96: }
+[; ;led.c: 97: }
+"97
+[e :UE 477 ]
+}
+"99
 [v _Led_TurnOnWhiteRamp `(v ~T0 @X0 1 ef ]
 {
-[; ;led.c: 96: void Led_TurnOnWhiteRamp() {
+[; ;led.c: 99: void Led_TurnOnWhiteRamp() {
 [e :U _Led_TurnOnWhiteRamp ]
 [f ]
-[; ;led.c: 97: gLedPara.mOn = 1;
-"97
-[e = . . _gLedPara 0 0 -> -> 1 `i `uc ]
-[; ;led.c: 98: gLedRunPara.mTargetBright[0] = 0;
-"98
-[e = *U + &U . _gLedRunPara 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux -> -> 0 `i `ui ]
-[; ;led.c: 99: gLedRunPara.mTargetBright[1] = gLedPara.white_bright;
-"99
-[e = *U + &U . _gLedRunPara 1 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux . . _gLedPara 0 5 ]
-[; ;led.c: 100: }
+[; ;led.c: 100: gLedPara.mOn = 1;
 "100
-[e :UE 480 ]
-}
-"102
-[v _Led_TurnOnBlueRamp `(v ~T0 @X0 1 ef ]
-{
-[; ;led.c: 102: void Led_TurnOnBlueRamp() {
-[e :U _Led_TurnOnBlueRamp ]
-[f ]
-[; ;led.c: 103: gLedPara.mOn = 1;
-"103
 [e = . . _gLedPara 0 0 -> -> 1 `i `uc ]
-[; ;led.c: 104: gLedRunPara.mTargetBright[0] = gLedPara.blue_bright;
-"104
-[e = *U + &U . _gLedRunPara 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux . . _gLedPara 0 6 ]
-[; ;led.c: 105: gLedRunPara.mTargetBright[1] = 0;
-"105
-[e = *U + &U . _gLedRunPara 1 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux -> -> 0 `i `ui ]
-[; ;led.c: 106: }
-"106
+[; ;led.c: 101: gLedRunPara.mTargetBright[0] = 0;
+"101
+[e = *U + &U . _gLedRunPara 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux -> -> 0 `i `ui ]
+[; ;led.c: 102: gLedRunPara.mTargetBright[1] = gLedPara.white_bright;
+"102
+[e = *U + &U . _gLedRunPara 1 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux . . _gLedPara 0 5 ]
+[; ;led.c: 103: }
+"103
 [e :UE 481 ]
 }
+"105
+[v _Led_TurnOnBlueRamp `(v ~T0 @X0 1 ef ]
+{
+[; ;led.c: 105: void Led_TurnOnBlueRamp() {
+[e :U _Led_TurnOnBlueRamp ]
+[f ]
+[; ;led.c: 106: gLedPara.mOn = 1;
+"106
+[e = . . _gLedPara 0 0 -> -> 1 `i `uc ]
+[; ;led.c: 107: gLedRunPara.mTargetBright[0] = gLedPara.blue_bright;
+"107
+[e = *U + &U . _gLedRunPara 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux . . _gLedPara 0 6 ]
+[; ;led.c: 108: gLedRunPara.mTargetBright[1] = 0;
 "108
+[e = *U + &U . _gLedRunPara 1 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux -> -> 0 `i `ui ]
+[; ;led.c: 109: }
+"109
+[e :UE 482 ]
+}
+"111
 [v _Led_TurnOffRamp `(v ~T0 @X0 1 ef ]
 {
-[; ;led.c: 108: void Led_TurnOffRamp() {
+[; ;led.c: 111: void Led_TurnOffRamp() {
 [e :U _Led_TurnOffRamp ]
 [f ]
-[; ;led.c: 109: gLedPara.mOn = 0;
-"109
+[; ;led.c: 112: gLedPara.mOn = 0;
+"112
 [e = . . _gLedPara 0 0 -> -> 0 `i `uc ]
-[; ;led.c: 110: for (uint8_t i = 0; i < 2; i++) {
-"110
+[; ;led.c: 113: for (uint8_t i = 0; i < 2; i++) {
+"113
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 2 `i 483  ]
-[e $U 484  ]
-[e :U 483 ]
-{
-[; ;led.c: 111: gLedRunPara.mTargetBright[i] = 0;
-"111
-[e = *U + &U . _gLedRunPara 1 * -> _i `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux -> -> 0 `i `ui ]
-"112
-}
-"110
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 2 `i 483  ]
+[e $ < -> _i `i -> 2 `i 484  ]
+[e $U 485  ]
 [e :U 484 ]
-"112
-}
-[; ;led.c: 112: }
-[; ;led.c: 113: }
-"113
-[e :UE 482 ]
-}
+{
+[; ;led.c: 114: gLedRunPara.mTargetBright[i] = 0;
+"114
+[e = *U + &U . _gLedRunPara 1 * -> _i `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux -> -> 0 `i `ui ]
 "115
+}
+"113
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 2 `i 484  ]
+[e :U 485 ]
+"115
+}
+[; ;led.c: 115: }
+[; ;led.c: 116: }
+"116
+[e :UE 483 ]
+}
+"118
 [v _Led_OnKeyPressed `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;led.c: 115: void Led_OnKeyPressed(uint8_t key) {
+[; ;led.c: 118: void Led_OnKeyPressed(uint8_t key) {
 [e :U _Led_OnKeyPressed ]
 [v _key `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;led.c: 116: switch (key) {
-"116
-[e $U 488  ]
-{
-[; ;led.c: 117: case 0x08:
-"117
-[e :U 489 ]
-[; ;led.c: 118: if (gLedPara.mOn) {
-"118
-[e $ ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 490  ]
-{
-[; ;led.c: 119: Audio_StopSound();
+[; ;led.c: 119: switch (key) {
 "119
-[e ( _Audio_StopSound ..  ]
-[; ;led.c: 120: gLedPara.mMode++;
-"120
-[e ++ . . _gLedPara 0 1 -> -> 1 `i `uc ]
-[; ;led.c: 121: if (gLedPara.mMode >= 5) {
-"121
-[e $ ! >= -> . . _gLedPara 0 1 `i -> 5 `i 491  ]
+[e $U 489  ]
 {
-[; ;led.c: 122: gLedPara.mMode = 0;
-"122
-[e = . . _gLedPara 0 1 -> -> 0 `i `uc ]
+[; ;led.c: 120: case 0x08:
+"120
+[e :U 490 ]
+[; ;led.c: 121: if (gLedPara.mOn) {
+"121
+[e $ ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 491  ]
+{
+[; ;led.c: 123: gLedPara.mMode++;
 "123
-}
-[e :U 491 ]
-[; ;led.c: 123: }
-[; ;led.c: 124: Led_Initialize();
+[e ++ . . _gLedPara 0 1 -> -> 1 `i `uc ]
+[; ;led.c: 124: if (gLedPara.mMode >= 5) {
 "124
-[e ( _Led_Initialize ..  ]
-[; ;led.c: 125: gLedRunPara.mParaChanged = 1;
+[e $ ! >= -> . . _gLedPara 0 1 `i -> 5 `i 492  ]
+{
+[; ;led.c: 125: gLedPara.mMode = 0;
 "125
-[e = . _gLedRunPara 2 -> -> 1 `i `uc ]
+[e = . . _gLedPara 0 1 -> -> 0 `i `uc ]
 "126
 }
-[e :U 490 ]
-[; ;led.c: 126: }
-[; ;led.c: 127: break;
-"127
-[e $U 487  ]
-[; ;led.c: 128: case 0x04:
-"128
 [e :U 492 ]
-[; ;led.c: 129: if (gLedPara.mOn) {
+[; ;led.c: 126: }
+[; ;led.c: 127: Led_Initialize();
+"127
+[e ( _Led_Initialize ..  ]
+[; ;led.c: 128: gLedRunPara.mParaChanged = 1;
+"128
+[e = . _gLedRunPara 2 -> -> 1 `i `uc ]
 "129
-[e $ ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 493  ]
-{
-[; ;led.c: 130: if (gLedPara.mMode == 0) {
+}
+[e :U 491 ]
+[; ;led.c: 129: }
+[; ;led.c: 130: break;
 "130
-[e $ ! == -> . . _gLedPara 0 1 `i -> 0 `i 494  ]
-{
-[; ;led.c: 131: Util_IncValue((uint16_t *) & gLedPara.all_bright, 1000, 200);
+[e $U 488  ]
+[; ;led.c: 131: case 0x04:
 "131
-[e ( _Util_IncValue (3 , , -> &U . . _gLedPara 0 4 `*ui -> -> 1000 `i `ui -> -> 200 `i `ui ]
-[; ;led.c: 132: Led_TurnOnAllRamp();
-"132
-[e ( _Led_TurnOnAllRamp ..  ]
-[; ;led.c: 133: gLedRunPara.mParaChanged = 1;
-"133
-[e = . _gLedRunPara 2 -> -> 1 `i `uc ]
-"134
-}
-[; ;led.c: 134: } else if (gLedPara.mMode == 1) {
-[e $U 495  ]
-[e :U 494 ]
-[e $ ! == -> . . _gLedPara 0 1 `i -> 1 `i 496  ]
-{
-[; ;led.c: 135: Util_IncValue((uint16_t *) & gLedPara.white_bright, 1000, 200);
-"135
-[e ( _Util_IncValue (3 , , -> &U . . _gLedPara 0 5 `*ui -> -> 1000 `i `ui -> -> 200 `i `ui ]
-[; ;led.c: 136: Led_TurnOnWhiteRamp();
-"136
-[e ( _Led_TurnOnWhiteRamp ..  ]
-[; ;led.c: 137: gLedRunPara.mParaChanged = 1;
-"137
-[e = . _gLedRunPara 2 -> -> 1 `i `uc ]
-"138
-}
-[; ;led.c: 138: } else if (gLedPara.mMode == 2) {
-[e $U 497  ]
-[e :U 496 ]
-[e $ ! == -> . . _gLedPara 0 1 `i -> 2 `i 498  ]
-{
-[; ;led.c: 139: Util_IncValue((uint16_t *) & gLedPara.blue_bright, 1000, 200);
-"139
-[e ( _Util_IncValue (3 , , -> &U . . _gLedPara 0 6 `*ui -> -> 1000 `i `ui -> -> 200 `i `ui ]
-[; ;led.c: 140: Led_TurnOnBlueRamp();
-"140
-[e ( _Led_TurnOnBlueRamp ..  ]
-[; ;led.c: 141: gLedRunPara.mParaChanged = 1;
-"141
-[e = . _gLedRunPara 2 -> -> 1 `i `uc ]
-"142
-}
-[e :U 498 ]
-"143
-[e :U 497 ]
-[e :U 495 ]
-}
 [e :U 493 ]
-[; ;led.c: 142: }
-[; ;led.c: 143: }
-[; ;led.c: 144: break;
-"144
-[e $U 487  ]
-[; ;led.c: 145: case 0x02:
-"145
-[e :U 499 ]
-[; ;led.c: 146: if (gLedPara.mOn) {
-"146
-[e $ ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 500  ]
+[; ;led.c: 132: if (gLedPara.mOn) {
+"132
+[e $ ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 494  ]
 {
-[; ;led.c: 147: if (gLedPara.mMode == 0) {
-"147
-[e $ ! == -> . . _gLedPara 0 1 `i -> 0 `i 501  ]
+[; ;led.c: 133: if (gLedPara.mMode == 0) {
+"133
+[e $ ! == -> . . _gLedPara 0 1 `i -> 0 `i 495  ]
 {
-[; ;led.c: 148: Util_DecValue((uint16_t *) & gLedPara.all_bright, 10, 200);
-"148
-[e ( _Util_DecValue (3 , , -> &U . . _gLedPara 0 4 `*ui -> -> 10 `i `ui -> -> 200 `i `ui ]
-[; ;led.c: 149: Led_TurnOnAllRamp();
-"149
+[; ;led.c: 134: Util_IncValue((uint16_t *) & gLedPara.all_bright, 1000, 200);
+"134
+[e ( _Util_IncValue (3 , , -> &U . . _gLedPara 0 4 `*ui -> -> 1000 `i `ui -> -> 200 `i `ui ]
+[; ;led.c: 135: Led_TurnOnAllRamp();
+"135
 [e ( _Led_TurnOnAllRamp ..  ]
-[; ;led.c: 150: gLedRunPara.mParaChanged = 1;
-"150
+[; ;led.c: 136: gLedRunPara.mParaChanged = 1;
+"136
 [e = . _gLedRunPara 2 -> -> 1 `i `uc ]
-"151
+"137
 }
-[; ;led.c: 151: } else if (gLedPara.mMode == 1) {
-[e $U 502  ]
-[e :U 501 ]
-[e $ ! == -> . . _gLedPara 0 1 `i -> 1 `i 503  ]
+[; ;led.c: 137: } else if (gLedPara.mMode == 1) {
+[e $U 496  ]
+[e :U 495 ]
+[e $ ! == -> . . _gLedPara 0 1 `i -> 1 `i 497  ]
 {
-[; ;led.c: 152: Util_DecValue((uint16_t *) & gLedPara.white_bright, 10, 200);
-"152
-[e ( _Util_DecValue (3 , , -> &U . . _gLedPara 0 5 `*ui -> -> 10 `i `ui -> -> 200 `i `ui ]
-[; ;led.c: 153: Led_TurnOnWhiteRamp();
-"153
+[; ;led.c: 138: Util_IncValue((uint16_t *) & gLedPara.white_bright, 1000, 200);
+"138
+[e ( _Util_IncValue (3 , , -> &U . . _gLedPara 0 5 `*ui -> -> 1000 `i `ui -> -> 200 `i `ui ]
+[; ;led.c: 139: Led_TurnOnWhiteRamp();
+"139
 [e ( _Led_TurnOnWhiteRamp ..  ]
-[; ;led.c: 154: gLedRunPara.mParaChanged = 1;
-"154
+[; ;led.c: 140: gLedRunPara.mParaChanged = 1;
+"140
 [e = . _gLedRunPara 2 -> -> 1 `i `uc ]
-"155
+"141
 }
-[; ;led.c: 155: } else if (gLedPara.mMode == 2) {
-[e $U 504  ]
-[e :U 503 ]
-[e $ ! == -> . . _gLedPara 0 1 `i -> 2 `i 505  ]
+[; ;led.c: 141: } else if (gLedPara.mMode == 2) {
+[e $U 498  ]
+[e :U 497 ]
+[e $ ! == -> . . _gLedPara 0 1 `i -> 2 `i 499  ]
 {
-[; ;led.c: 156: Util_DecValue((uint16_t *) & gLedPara.blue_bright, 10, 200);
-"156
-[e ( _Util_DecValue (3 , , -> &U . . _gLedPara 0 6 `*ui -> -> 10 `i `ui -> -> 200 `i `ui ]
-[; ;led.c: 157: Led_TurnOnBlueRamp();
-"157
+[; ;led.c: 142: Util_IncValue((uint16_t *) & gLedPara.blue_bright, 1000, 200);
+"142
+[e ( _Util_IncValue (3 , , -> &U . . _gLedPara 0 6 `*ui -> -> 1000 `i `ui -> -> 200 `i `ui ]
+[; ;led.c: 143: Led_TurnOnBlueRamp();
+"143
 [e ( _Led_TurnOnBlueRamp ..  ]
-[; ;led.c: 158: gLedRunPara.mParaChanged = 1;
-"158
+[; ;led.c: 144: gLedRunPara.mParaChanged = 1;
+"144
 [e = . _gLedRunPara 2 -> -> 1 `i `uc ]
-"159
+"145
 }
-[e :U 505 ]
-"160
-[e :U 504 ]
-[e :U 502 ]
+[e :U 499 ]
+"146
+[e :U 498 ]
+[e :U 496 ]
 }
+[e :U 494 ]
+[; ;led.c: 145: }
+[; ;led.c: 146: }
+[; ;led.c: 147: break;
+"147
+[e $U 488  ]
+[; ;led.c: 148: case 0x02:
+"148
 [e :U 500 ]
-[; ;led.c: 159: }
-[; ;led.c: 160: }
-[; ;led.c: 161: break;
-"161
-[e $U 487  ]
-[; ;led.c: 162: case 0x01:
-"162
-[e :U 506 ]
-[; ;led.c: 163: if (gLedPara.mOn && gLedPara.mVolOn) {
-"163
-[e $ ! && != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i != -> . . _gLedPara 0 2 `i -> -> -> 0 `i `Vuc `i 507  ]
+[; ;led.c: 149: if (gLedPara.mOn) {
+"149
+[e $ ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 501  ]
 {
-[; ;led.c: 164: gLedPara.mVolume++;
-"164
-[e ++ . . _gLedPara 0 3 -> -> 1 `i `uc ]
-[; ;led.c: 165: if (gLedPara.mVolume > 4) {
-"165
-[e $ ! > -> . . _gLedPara 0 3 `i -> 4 `i 508  ]
+[; ;led.c: 150: if (gLedPara.mMode == 0) {
+"150
+[e $ ! == -> . . _gLedPara 0 1 `i -> 0 `i 502  ]
 {
-[; ;led.c: 166: gLedPara.mVolume = 0;
-"166
-[e = . . _gLedPara 0 3 -> -> 0 `i `uc ]
-"167
-}
-[e :U 508 ]
-[; ;led.c: 167: }
-[; ;led.c: 168: Audio_SetVolume(VOLUME[gLedPara.mVolume]);
-"168
-[e ( _Audio_SetVolume (1 *U + &U _VOLUME * -> . . _gLedPara 0 3 `ux -> -> # *U &U _VOLUME `ui `ux ]
-[; ;led.c: 169: gLedRunPara.mParaChanged = 1;
-"169
+[; ;led.c: 151: Util_DecValue((uint16_t *) & gLedPara.all_bright, 10, 200);
+"151
+[e ( _Util_DecValue (3 , , -> &U . . _gLedPara 0 4 `*ui -> -> 10 `i `ui -> -> 200 `i `ui ]
+[; ;led.c: 152: Led_TurnOnAllRamp();
+"152
+[e ( _Led_TurnOnAllRamp ..  ]
+[; ;led.c: 153: gLedRunPara.mParaChanged = 1;
+"153
 [e = . _gLedRunPara 2 -> -> 1 `i `uc ]
+"154
+}
+[; ;led.c: 154: } else if (gLedPara.mMode == 1) {
+[e $U 503  ]
+[e :U 502 ]
+[e $ ! == -> . . _gLedPara 0 1 `i -> 1 `i 504  ]
+{
+[; ;led.c: 155: Util_DecValue((uint16_t *) & gLedPara.white_bright, 10, 200);
+"155
+[e ( _Util_DecValue (3 , , -> &U . . _gLedPara 0 5 `*ui -> -> 10 `i `ui -> -> 200 `i `ui ]
+[; ;led.c: 156: Led_TurnOnWhiteRamp();
+"156
+[e ( _Led_TurnOnWhiteRamp ..  ]
+[; ;led.c: 157: gLedRunPara.mParaChanged = 1;
+"157
+[e = . _gLedRunPara 2 -> -> 1 `i `uc ]
+"158
+}
+[; ;led.c: 158: } else if (gLedPara.mMode == 2) {
+[e $U 505  ]
+[e :U 504 ]
+[e $ ! == -> . . _gLedPara 0 1 `i -> 2 `i 506  ]
+{
+[; ;led.c: 159: Util_DecValue((uint16_t *) & gLedPara.blue_bright, 10, 200);
+"159
+[e ( _Util_DecValue (3 , , -> &U . . _gLedPara 0 6 `*ui -> -> 10 `i `ui -> -> 200 `i `ui ]
+[; ;led.c: 160: Led_TurnOnBlueRamp();
+"160
+[e ( _Led_TurnOnBlueRamp ..  ]
+[; ;led.c: 161: gLedRunPara.mParaChanged = 1;
+"161
+[e = . _gLedRunPara 2 -> -> 1 `i `uc ]
+"162
+}
+[e :U 506 ]
+"163
+[e :U 505 ]
+[e :U 503 ]
+}
+[e :U 501 ]
+[; ;led.c: 162: }
+[; ;led.c: 163: }
+[; ;led.c: 164: break;
+"164
+[e $U 488  ]
+[; ;led.c: 165: case 0x01:
+"165
+[e :U 507 ]
+[; ;led.c: 166: if (gLedPara.mOn && gLedPara.mVolOn) {
+"166
+[e $ ! && != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i != -> . . _gLedPara 0 2 `i -> -> -> 0 `i `Vuc `i 508  ]
+{
+[; ;led.c: 167: gLedPara.mVolume++;
+"167
+[e ++ . . _gLedPara 0 3 -> -> 1 `i `uc ]
+[; ;led.c: 168: if (gLedPara.mVolume > 4) {
+"168
+[e $ ! > -> . . _gLedPara 0 3 `i -> 4 `i 509  ]
+{
+[; ;led.c: 169: gLedPara.mVolume = 0;
+"169
+[e = . . _gLedPara 0 3 -> -> 0 `i `uc ]
 "170
 }
-[e :U 507 ]
-[; ;led.c: 170: }
-[; ;led.c: 171: break;
-"171
-[e $U 487  ]
-[; ;led.c: 172: case (0x80 | 0x08):
-"172
 [e :U 509 ]
-[; ;led.c: 173: Audio_StopSound();
+[; ;led.c: 170: }
+[; ;led.c: 171: Audio_SetVolume(VOLUME[gLedPara.mVolume]);
+"171
+[e ( _Audio_SetVolume (1 *U + &U _VOLUME * -> . . _gLedPara 0 3 `ux -> -> # *U &U _VOLUME `ui `ux ]
+[; ;led.c: 172: gLedRunPara.mParaChanged = 1;
+"172
+[e = . _gLedRunPara 2 -> -> 1 `i `uc ]
 "173
-[e ( _Audio_StopSound ..  ]
-[; ;led.c: 174: gLedPara.mOn = !gLedPara.mOn;
+}
+[e :U 508 ]
+[; ;led.c: 173: }
+[; ;led.c: 174: break;
 "174
-[e = . . _gLedPara 0 0 -> -> ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
-[; ;led.c: 175: Led_Initialize();
+[e $U 488  ]
+[; ;led.c: 175: case (0x80 | 0x08):
 "175
-[e ( _Led_Initialize ..  ]
-[; ;led.c: 176: gLedRunPara.mParaChanged = 1;
-"176
-[e = . _gLedRunPara 2 -> -> 1 `i `uc ]
-[; ;led.c: 177: break;
-"177
-[e $U 487  ]
-[; ;led.c: 178: case (0x80 | 0x01):
-"178
 [e :U 510 ]
-[; ;led.c: 179: if (gLedPara.mOn) {
+[; ;led.c: 176: Audio_StopSound();
+"176
+[e ( _Audio_StopSound ..  ]
+[; ;led.c: 177: gLedPara.mOn = !gLedPara.mOn;
+"177
+[e = . . _gLedPara 0 0 -> -> ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;led.c: 178: Led_Initialize();
+"178
+[e ( _Led_Initialize ..  ]
+[; ;led.c: 179: gLedRunPara.mParaChanged = 1;
 "179
-[e $ ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 511  ]
-{
-[; ;led.c: 180: gLedPara.mVolOn = !gLedPara.mVolOn;
-"180
-[e = . . _gLedPara 0 2 -> -> ! != -> . . _gLedPara 0 2 `i -> -> -> 0 `i `Vuc `i `i `uc ]
-[; ;led.c: 181: Audio_SetVolume(gLedPara.mOn ? VOLUME[gLedPara.mVolume] : 0);
-"181
-[e ( _Audio_SetVolume (1 -> ? != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i : -> *U + &U _VOLUME * -> . . _gLedPara 0 3 `ux -> -> # *U &U _VOLUME `ui `ux `i -> 0 `i `uc ]
-[; ;led.c: 182: gLedRunPara.mParaChanged = 1;
-"182
 [e = . _gLedRunPara 2 -> -> 1 `i `uc ]
-"183
-}
+[; ;led.c: 180: break;
+"180
+[e $U 488  ]
+[; ;led.c: 181: case (0x80 | 0x01):
+"181
 [e :U 511 ]
-[; ;led.c: 183: }
-[; ;led.c: 184: break;
+[; ;led.c: 182: if (gLedPara.mOn) {
+"182
+[e $ ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 512  ]
+{
+[; ;led.c: 183: gLedPara.mVolOn = !gLedPara.mVolOn;
+"183
+[e = . . _gLedPara 0 2 -> -> ! != -> . . _gLedPara 0 2 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;led.c: 184: Audio_SetVolume(gLedPara.mVolOn ? VOLUME[ gLedPara.mVolume ] : 0);
 "184
-[e $U 487  ]
-[; ;led.c: 185: default:
+[e ( _Audio_SetVolume (1 -> ? != -> . . _gLedPara 0 2 `i -> -> -> 0 `i `Vuc `i : -> *U + &U _VOLUME * -> . . _gLedPara 0 3 `ux -> -> # *U &U _VOLUME `ui `ux `i -> 0 `i `uc ]
+[; ;led.c: 185: gLedRunPara.mParaChanged = 1;
 "185
-[e :U 512 ]
-[; ;led.c: 186: break;
+[e = . _gLedRunPara 2 -> -> 1 `i `uc ]
 "186
-[e $U 487  ]
-"187
 }
-[; ;led.c: 187: }
-[e $U 487  ]
-"116
-[e :U 488 ]
-[e [\ _key , $ -> -> 8 `i `uc 489
- , $ -> -> 4 `i `uc 492
- , $ -> -> 2 `i `uc 499
- , $ -> -> 1 `i `uc 506
- , $ -> | -> 128 `i -> 8 `i `uc 509
- , $ -> | -> 128 `i -> 1 `i `uc 510
- 512 ]
+[e :U 512 ]
+[; ;led.c: 186: }
+[; ;led.c: 187: break;
 "187
-[e :U 487 ]
-[; ;led.c: 188: }
+[e $U 488  ]
+[; ;led.c: 188: default:
 "188
-[e :UE 486 ]
-}
+[e :U 513 ]
+[; ;led.c: 189: break;
+"189
+[e $U 488  ]
 "190
+}
+[; ;led.c: 190: }
+[e $U 488  ]
+"119
+[e :U 489 ]
+[e [\ _key , $ -> -> 8 `i `uc 490
+ , $ -> -> 4 `i `uc 493
+ , $ -> -> 2 `i `uc 500
+ , $ -> -> 1 `i `uc 507
+ , $ -> | -> 128 `i -> 8 `i `uc 510
+ , $ -> | -> 128 `i -> 1 `i `uc 511
+ 513 ]
+"190
+[e :U 488 ]
+[; ;led.c: 191: }
+"191
+[e :UE 487 ]
+}
+"193
 [v _Led_Ramp `(v ~T0 @X0 1 ef ]
 {
-[; ;led.c: 190: void Led_Ramp() {
+[; ;led.c: 193: void Led_Ramp() {
 [e :U _Led_Ramp ]
 [f ]
-[; ;led.c: 191: for (uint8_t i = 0; i < 2; i++) {
-"191
+[; ;led.c: 194: for (uint8_t i = 0; i < 2; i++) {
+"194
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 2 `i 514  ]
-[e $U 515  ]
-[e :U 514 ]
-{
-[; ;led.c: 192: if (gLedRunPara.mCurrentBright[i] + 1 < gLedRunPara.mTargetBright[i]) {
-"192
-[e $ ! < + *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui *U + &U . _gLedRunPara 1 * -> _i `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux 517  ]
-{
-[; ;led.c: 193: gLedRunPara.mCurrentBright[i] += 1;
-"193
-[e =+ *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
-"194
-}
-[; ;led.c: 194: } else if (gLedRunPara.mCurrentBright[i] > gLedRunPara.mTargetBright[i] + 1) {
-[e $U 518  ]
-[e :U 517 ]
-[e $ ! > *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux + *U + &U . _gLedRunPara 1 * -> _i `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux -> -> 1 `i `ui 519  ]
-{
-[; ;led.c: 195: gLedRunPara.mCurrentBright[i] -= 1;
-"195
-[e =- *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
-"196
-}
-[; ;led.c: 196: } else {
-[e $U 520  ]
-[e :U 519 ]
-{
-[; ;led.c: 197: gLedRunPara.mCurrentBright[i] = gLedRunPara.mTargetBright[i];
-"197
-[e = *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux *U + &U . _gLedRunPara 1 * -> _i `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux ]
-"198
-}
-[e :U 520 ]
-[e :U 518 ]
-[; ;led.c: 198: }
-[; ;led.c: 199: loadDuty[i]( gLedRunPara.mCurrentBright[i] );
-"199
-[e ( *U *U + &U _loadDuty * -> _i `ux -> -> # *U &U _loadDuty `ui `ux (1 *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux ]
-"200
-}
-"191
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 2 `i 514  ]
+[e $ < -> _i `i -> 2 `i 515  ]
+[e $U 516  ]
 [e :U 515 ]
+{
+[; ;led.c: 195: if (gLedRunPara.mCurrentBright[i] + 1 < gLedRunPara.mTargetBright[i]) {
+"195
+[e $ ! < + *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui *U + &U . _gLedRunPara 1 * -> _i `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux 518  ]
+{
+[; ;led.c: 196: gLedRunPara.mCurrentBright[i] += 1;
+"196
+[e =+ *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
+"197
+}
+[; ;led.c: 197: } else if (gLedRunPara.mCurrentBright[i] > gLedRunPara.mTargetBright[i] + 1) {
+[e $U 519  ]
+[e :U 518 ]
+[e $ ! > *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux + *U + &U . _gLedRunPara 1 * -> _i `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux -> -> 1 `i `ui 520  ]
+{
+[; ;led.c: 198: gLedRunPara.mCurrentBright[i] -= 1;
+"198
+[e =- *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
+"199
+}
+[; ;led.c: 199: } else {
+[e $U 521  ]
+[e :U 520 ]
+{
+[; ;led.c: 200: gLedRunPara.mCurrentBright[i] = gLedRunPara.mTargetBright[i];
 "200
-}
-[; ;led.c: 200: }
-[; ;led.c: 201: }
+[e = *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux *U + &U . _gLedRunPara 1 * -> _i `ux -> -> # *U &U . _gLedRunPara 1 `ui `ux ]
 "201
-[e :UE 513 ]
 }
+[e :U 521 ]
+[e :U 519 ]
+[; ;led.c: 201: }
+[; ;led.c: 202: loadDuty[i]( gLedRunPara.mCurrentBright[i] );
+"202
+[e ( *U *U + &U _loadDuty * -> _i `ux -> -> # *U &U _loadDuty `ui `ux (1 *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux ]
 "203
+}
+"194
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 2 `i 515  ]
+[e :U 516 ]
+"203
+}
+[; ;led.c: 203: }
+[; ;led.c: 204: }
+"204
+[e :UE 514 ]
+}
+"206
 [v _Led_DynamicCloud `(v ~T0 @X0 1 ef1`ui ]
 {
-[; ;led.c: 203: void Led_DynamicCloud(uint16_t ptp) {
+[; ;led.c: 206: void Led_DynamicCloud(uint16_t ptp) {
 [e :U _Led_DynamicCloud ]
 [v _ptp `ui ~T0 @X0 1 r1 ]
 [f ]
-"204
+"207
 [v _i `uc ~T0 @X0 1 a ]
-"205
+"208
 [v _val `ui ~T0 @X0 1 a ]
-[; ;led.c: 204: uint8_t i;
-[; ;led.c: 205: uint16_t val = ptp * ( 6 + GAIN[gLedPara.mVolume] );
+[; ;led.c: 207: uint8_t i;
+[; ;led.c: 208: uint16_t val = ptp * ( 6 + GAIN[gLedPara.mVolume] );
 [e = _val * _ptp -> + -> 6 `i -> *U + &U _GAIN * -> . . _gLedPara 0 3 `ux -> -> # *U &U _GAIN `ui `ux `i `ui ]
-[v F4456 `ui ~T0 @X0 -> 2 `i s ]
-[i F4456
+[v F4458 `ui ~T0 @X0 -> 2 `i s ]
+[i F4458
 :U ..
-"206
+"209
 -> -> 400 `i `ui
 -> -> 320 `i `ui
 ..
 ]
 [v _duty `ui ~T0 @X0 -> 2 `i a ]
-[; ;led.c: 206: uint16_t duty[2] = {400, 320};
-[e = _duty F4456 ]
-[; ;led.c: 207: if (duty[1] > val) {
-"207
-[e $ ! > *U + &U _duty * -> -> -> 1 `i `ui `ux -> -> # *U &U _duty `ui `ux _val 522  ]
-{
-[; ;led.c: 208: duty[1] -= val;
-"208
-[e =- *U + &U _duty * -> -> -> 1 `i `ui `ux -> -> # *U &U _duty `ui `ux _val ]
-"209
-}
-[; ;led.c: 209: } else {
-[e $U 523  ]
-[e :U 522 ]
-{
-[; ;led.c: 210: duty[1] = 0;
+[; ;led.c: 209: uint16_t duty[2] = {400, 320};
+[e = _duty F4458 ]
+[; ;led.c: 210: if (duty[1] > val) {
 "210
-[e = *U + &U _duty * -> -> -> 1 `i `ui `ux -> -> # *U &U _duty `ui `ux -> -> 0 `i `ui ]
+[e $ ! > *U + &U _duty * -> -> -> 1 `i `ui `ux -> -> # *U &U _duty `ui `ux _val 523  ]
+{
+[; ;led.c: 211: duty[1] -= val;
 "211
-}
-[e :U 523 ]
-[; ;led.c: 211: }
-[; ;led.c: 212: for (i = 0; i < 2; i++) {
+[e =- *U + &U _duty * -> -> -> 1 `i `ui `ux -> -> # *U &U _duty `ui `ux _val ]
 "212
+}
+[; ;led.c: 212: } else {
+[e $U 524  ]
+[e :U 523 ]
+{
+[; ;led.c: 213: duty[1] = 0;
+"213
+[e = *U + &U _duty * -> -> -> 1 `i `ui `ux -> -> # *U &U _duty `ui `ux -> -> 0 `i `ui ]
+"214
+}
+[e :U 524 ]
+[; ;led.c: 214: }
+[; ;led.c: 215: for (i = 0; i < 2; i++) {
+"215
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 2 `i 524  ]
-[e $U 525  ]
-[e :U 524 ]
-{
-[; ;led.c: 213: if (gLedRunPara.mCurrentBright[i] < duty[i]) {
-"213
-[e $ ! < *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux *U + &U _duty * -> _i `ux -> -> # *U &U _duty `ui `ux 527  ]
-{
-[; ;led.c: 214: gLedRunPara.mCurrentBright[i]++;
-"214
-[e ++ *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
-"215
-}
-[; ;led.c: 215: } else if (gLedRunPara.mCurrentBright[i] > duty[i]) {
-[e $U 528  ]
-[e :U 527 ]
-[e $ ! > *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux *U + &U _duty * -> _i `ux -> -> # *U &U _duty `ui `ux 529  ]
-{
-[; ;led.c: 216: gLedRunPara.mCurrentBright[i]--;
-"216
-[e -- *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
-"217
-}
-[e :U 529 ]
-"218
-[e :U 528 ]
-[; ;led.c: 217: }
-[; ;led.c: 218: loadDuty[i](gLedRunPara.mCurrentBright[i]);
-[e ( *U *U + &U _loadDuty * -> _i `ux -> -> # *U &U _loadDuty `ui `ux (1 *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux ]
-"219
-}
-"212
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 2 `i 524  ]
+[e $ < -> _i `i -> 2 `i 525  ]
+[e $U 526  ]
 [e :U 525 ]
+{
+[; ;led.c: 216: if (gLedRunPara.mCurrentBright[i] < duty[i]) {
+"216
+[e $ ! < *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux *U + &U _duty * -> _i `ux -> -> # *U &U _duty `ui `ux 528  ]
+{
+[; ;led.c: 217: gLedRunPara.mCurrentBright[i]++;
+"217
+[e ++ *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
+"218
+}
+[; ;led.c: 218: } else if (gLedRunPara.mCurrentBright[i] > duty[i]) {
+[e $U 529  ]
+[e :U 528 ]
+[e $ ! > *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux *U + &U _duty * -> _i `ux -> -> # *U &U _duty `ui `ux 530  ]
+{
+[; ;led.c: 219: gLedRunPara.mCurrentBright[i]--;
 "219
-}
-[; ;led.c: 219: }
-[; ;led.c: 220: }
+[e -- *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
 "220
-[e :UE 521 ]
 }
+[e :U 530 ]
+"221
+[e :U 529 ]
+[; ;led.c: 220: }
+[; ;led.c: 221: loadDuty[i](gLedRunPara.mCurrentBright[i]);
+[e ( *U *U + &U _loadDuty * -> _i `ux -> -> # *U &U _loadDuty `ui `ux (1 *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux ]
 "222
+}
+"215
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 2 `i 525  ]
+[e :U 526 ]
+"222
+}
+[; ;led.c: 222: }
+[; ;led.c: 223: }
+"223
+[e :UE 522 ]
+}
+"225
 [v _Led_DynamicStorm `(v ~T0 @X0 1 ef1`ui ]
 {
-[; ;led.c: 222: void Led_DynamicStorm(uint16_t ptp) {
+[; ;led.c: 225: void Led_DynamicStorm(uint16_t ptp) {
 [e :U _Led_DynamicStorm ]
 [v _ptp `ui ~T0 @X0 1 r1 ]
 [f ]
-"223
+"226
 [v _i `uc ~T0 @X0 1 a ]
-"224
+"227
 [v _val `ui ~T0 @X0 1 a ]
-[; ;led.c: 223: uint8_t i;
-[; ;led.c: 224: uint16_t val = ptp * ( 5 + GAIN[gLedPara.mVolume] );
+[; ;led.c: 226: uint8_t i;
+[; ;led.c: 227: uint16_t val = ptp * ( 5 + GAIN[gLedPara.mVolume] );
 [e = _val * _ptp -> + -> 5 `i -> *U + &U _GAIN * -> . . _gLedPara 0 3 `ux -> -> # *U &U _GAIN `ui `ux `i `ui ]
-[v F4467 `ui ~T0 @X0 -> 2 `i s ]
-[i F4467
+[v F4469 `ui ~T0 @X0 -> 2 `i s ]
+[i F4469
 :U ..
-"225
+"228
 -> -> 500 `i `ui
 -> -> 64 `i `ui
 ..
 ]
 [v _duty `ui ~T0 @X0 -> 2 `i a ]
-[; ;led.c: 225: uint16_t duty[2] = {500, 64};
-[e = _duty F4467 ]
-[; ;led.c: 226: if (duty[0] > val) {
-"226
-[e $ ! > *U + &U _duty * -> -> -> 0 `i `ui `ux -> -> # *U &U _duty `ui `ux _val 531  ]
-{
-[; ;led.c: 227: duty[0] -= val;
-"227
-[e =- *U + &U _duty * -> -> -> 0 `i `ui `ux -> -> # *U &U _duty `ui `ux _val ]
-"228
-}
-[; ;led.c: 228: } else {
-[e $U 532  ]
-[e :U 531 ]
-{
-[; ;led.c: 229: duty[0] = 0;
+[; ;led.c: 228: uint16_t duty[2] = {500, 64};
+[e = _duty F4469 ]
+[; ;led.c: 229: if (duty[0] > val) {
 "229
-[e = *U + &U _duty * -> -> -> 0 `i `ui `ux -> -> # *U &U _duty `ui `ux -> -> 0 `i `ui ]
+[e $ ! > *U + &U _duty * -> -> -> 0 `i `ui `ux -> -> # *U &U _duty `ui `ux _val 532  ]
+{
+[; ;led.c: 230: duty[0] -= val;
 "230
-}
-[e :U 532 ]
-[; ;led.c: 230: }
-[; ;led.c: 231: duty[1] += val;
+[e =- *U + &U _duty * -> -> -> 0 `i `ui `ux -> -> # *U &U _duty `ui `ux _val ]
 "231
-[e =+ *U + &U _duty * -> -> -> 1 `i `ui `ux -> -> # *U &U _duty `ui `ux _val ]
-[; ;led.c: 232: for (i = 0; i < 2; i++) {
+}
+[; ;led.c: 231: } else {
+[e $U 533  ]
+[e :U 532 ]
+{
+[; ;led.c: 232: duty[0] = 0;
 "232
+[e = *U + &U _duty * -> -> -> 0 `i `ui `ux -> -> # *U &U _duty `ui `ux -> -> 0 `i `ui ]
+"233
+}
+[e :U 533 ]
+[; ;led.c: 233: }
+[; ;led.c: 234: duty[1] += val;
+"234
+[e =+ *U + &U _duty * -> -> -> 1 `i `ui `ux -> -> # *U &U _duty `ui `ux _val ]
+[; ;led.c: 235: for (i = 0; i < 2; i++) {
+"235
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 2 `i 533  ]
-[e $U 534  ]
-[e :U 533 ]
-{
-[; ;led.c: 233: if (gLedRunPara.mCurrentBright[i] < duty[i]) {
-"233
-[e $ ! < *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux *U + &U _duty * -> _i `ux -> -> # *U &U _duty `ui `ux 536  ]
-{
-[; ;led.c: 234: gLedRunPara.mCurrentBright[i]++;
-"234
-[e ++ *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
-"235
-}
-[; ;led.c: 235: } else if (gLedRunPara.mCurrentBright[i] > duty[i]) {
-[e $U 537  ]
-[e :U 536 ]
-[e $ ! > *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux *U + &U _duty * -> _i `ux -> -> # *U &U _duty `ui `ux 538  ]
-{
-[; ;led.c: 236: gLedRunPara.mCurrentBright[i]--;
-"236
-[e -- *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
-"237
-}
-[e :U 538 ]
-"238
-[e :U 537 ]
-[; ;led.c: 237: }
-[; ;led.c: 238: loadDuty[i](gLedRunPara.mCurrentBright[i]);
-[e ( *U *U + &U _loadDuty * -> _i `ux -> -> # *U &U _loadDuty `ui `ux (1 *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux ]
-"239
-}
-"232
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 2 `i 533  ]
+[e $ < -> _i `i -> 2 `i 534  ]
+[e $U 535  ]
 [e :U 534 ]
+{
+[; ;led.c: 236: if (gLedRunPara.mCurrentBright[i] < duty[i]) {
+"236
+[e $ ! < *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux *U + &U _duty * -> _i `ux -> -> # *U &U _duty `ui `ux 537  ]
+{
+[; ;led.c: 237: gLedRunPara.mCurrentBright[i]++;
+"237
+[e ++ *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
+"238
+}
+[; ;led.c: 238: } else if (gLedRunPara.mCurrentBright[i] > duty[i]) {
+[e $U 538  ]
+[e :U 537 ]
+[e $ ! > *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux *U + &U _duty * -> _i `ux -> -> # *U &U _duty `ui `ux 539  ]
+{
+[; ;led.c: 239: gLedRunPara.mCurrentBright[i]--;
 "239
-}
-[; ;led.c: 239: }
-[; ;led.c: 240: }
+[e -- *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux -> -> 1 `i `ui ]
 "240
-[e :UE 530 ]
 }
+[e :U 539 ]
+"241
+[e :U 538 ]
+[; ;led.c: 240: }
+[; ;led.c: 241: loadDuty[i](gLedRunPara.mCurrentBright[i]);
+[e ( *U *U + &U _loadDuty * -> _i `ux -> -> # *U &U _loadDuty `ui `ux (1 *U + &U . _gLedRunPara 0 * -> _i `ux -> -> # *U &U . _gLedRunPara 0 `ui `ux ]
 "242
+}
+"235
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 2 `i 534  ]
+[e :U 535 ]
+"242
+}
+[; ;led.c: 242: }
+[; ;led.c: 243: }
+"243
+[e :UE 531 ]
+}
+"245
 [v _Led_RunMusic `(v ~T0 @X0 1 ef ]
 {
-[; ;led.c: 242: void Led_RunMusic() {
+[; ;led.c: 245: void Led_RunMusic() {
 [e :U _Led_RunMusic ]
 [f ]
-[; ;led.c: 243: if (gLedRunPara.music_state < 32) {
-"243
-[e $ ! < -> . _gLedRunPara 3 `i -> 32 `i 540  ]
-{
-[; ;led.c: 244: gLedRunPara.music_state++;
-"244
-[e ++ . _gLedRunPara 3 -> -> 1 `i `uc ]
-"245
-}
-[; ;led.c: 245: } else if (gLedRunPara.music_state == 32) {
-[e $U 541  ]
-[e :U 540 ]
-[e $ ! == -> . _gLedRunPara 3 `i -> 32 `i 542  ]
-{
-[; ;led.c: 246: Audio_SelectSound(gLedPara.mMode + 1);
+[; ;led.c: 246: if (gLedRunPara.music_state < 32) {
 "246
-[e ( _Audio_SelectSound (1 -> + -> . . _gLedPara 0 1 `i -> 1 `i `uc ]
+[e $ ! < -> . _gLedRunPara 3 `i -> 32 `i 541  ]
+{
 [; ;led.c: 247: gLedRunPara.music_state++;
 "247
 [e ++ . _gLedRunPara 3 -> -> 1 `i `uc ]
 "248
 }
-[e :U 542 ]
-"255
+[; ;led.c: 248: } else if (gLedRunPara.music_state == 32 ) {
+[e $U 542  ]
 [e :U 541 ]
-[; ;led.c: 248: }
-[; ;led.c: 255: switch (gLedPara.mMode) {
-[e $U 544  ]
+[e $ ! == -> . _gLedRunPara 3 `i -> 32 `i 543  ]
 {
-[; ;led.c: 256: case 0:
-"256
-[e :U 545 ]
-"257
+[; ;led.c: 249: Audio_SelectSound(gLedPara.mMode + 0x31);
+"249
+[e ( _Audio_SelectSound (1 -> + -> . . _gLedPara 0 1 `i -> 49 `i `uc ]
+[; ;led.c: 250: gLedRunPara.music_state++;
+"250
+[e ++ . _gLedRunPara 3 -> -> 1 `i `uc ]
+"251
+}
+[e :U 543 ]
+"252
+[e :U 542 ]
+[; ;led.c: 251: }
+[; ;led.c: 252: switch (gLedPara.mMode) {
+[e $U 545  ]
+{
+[; ;led.c: 253: case 0:
+"253
 [e :U 546 ]
-"258
+"254
 [e :U 547 ]
-[; ;led.c: 257: case 1:
-[; ;led.c: 258: case 2:
-[; ;led.c: 259: Led_Ramp();
-"259
+"255
+[e :U 548 ]
+[; ;led.c: 254: case 1:
+[; ;led.c: 255: case 2:
+[; ;led.c: 256: Led_Ramp();
+"256
 [e ( _Led_Ramp ..  ]
+[; ;led.c: 257: break;
+"257
+[e $U 544  ]
+[; ;led.c: 258: case 3:
+"258
+[e :U 549 ]
+[; ;led.c: 259: Led_DynamicCloud(audio_value);
+"259
+[e ( _Led_DynamicCloud (1 _audio_value ]
 [; ;led.c: 260: break;
 "260
-[e $U 543  ]
-[; ;led.c: 261: case 3:
+[e $U 544  ]
+[; ;led.c: 261: case 4:
 "261
-[e :U 548 ]
-[; ;led.c: 262: Led_DynamicCloud(audio_value);
+[e :U 550 ]
+[; ;led.c: 262: Led_DynamicStorm(audio_value);
 "262
-[e ( _Led_DynamicCloud (1 _audio_value ]
+[e ( _Led_DynamicStorm (1 _audio_value ]
 [; ;led.c: 263: break;
 "263
-[e $U 543  ]
-[; ;led.c: 264: case 4:
+[e $U 544  ]
+[; ;led.c: 264: default:
 "264
-[e :U 549 ]
-[; ;led.c: 265: Led_DynamicStorm(audio_value);
+[e :U 551 ]
+[; ;led.c: 265: break;
 "265
-[e ( _Led_DynamicStorm (1 _audio_value ]
-[; ;led.c: 266: break;
+[e $U 544  ]
 "266
-[e $U 543  ]
-[; ;led.c: 267: default:
-"267
-[e :U 550 ]
-[; ;led.c: 268: break;
-"268
-[e $U 543  ]
-"269
 }
-[; ;led.c: 269: }
-[e $U 543  ]
-"255
+[; ;led.c: 266: }
+[e $U 544  ]
+"252
+[e :U 545 ]
+[e [\ . . _gLedPara 0 1 , $ -> -> 0 `i `uc 546
+ , $ -> -> 1 `i `uc 547
+ , $ -> -> 2 `i `uc 548
+ , $ -> -> 3 `i `uc 549
+ , $ -> -> 4 `i `uc 550
+ 551 ]
+"266
 [e :U 544 ]
-[e [\ . . _gLedPara 0 1 , $ -> -> 0 `i `uc 545
- , $ -> -> 1 `i `uc 546
- , $ -> -> 2 `i `uc 547
- , $ -> -> 3 `i `uc 548
- , $ -> -> 4 `i `uc 549
- 550 ]
-"269
-[e :U 543 ]
-[; ;led.c: 270: }
-"270
-[e :UE 539 ]
+[; ;led.c: 267: }
+"267
+[e :UE 540 ]
 }
-"272
+"269
 [v _Led_Run `(v ~T0 @X0 1 ef ]
 {
-[; ;led.c: 272: void Led_Run() {
+[; ;led.c: 269: void Led_Run() {
 [e :U _Led_Run ]
 [f ]
-"273
-[v F4474 `uc ~T0 @X0 1 s cnt ]
-[i F4474
+"270
+[v F4476 `uc ~T0 @X0 1 s cnt ]
+[i F4476
 -> -> 0 `i `uc
 ]
-[; ;led.c: 273: static uint8_t cnt = 0;
-[; ;led.c: 274: cnt++;
-"274
-[e ++ F4474 -> -> 1 `i `uc ]
-[; ;led.c: 275: if ((cnt & 0x0F) == 0x00) {
-"275
-[e $ ! == & -> F4474 `i -> 15 `i -> 0 `i 552  ]
+[; ;led.c: 270: static uint8_t cnt = 0;
+[; ;led.c: 271: cnt++;
+"271
+[e ++ F4476 -> -> 1 `i `uc ]
+[; ;led.c: 272: if ((cnt & 0x0F) == 0x00) {
+"272
+[e $ ! == & -> F4476 `i -> 15 `i -> 0 `i 553  ]
 {
-[; ;led.c: 276: Key_Scan();
-"276
+[; ;led.c: 273: Key_Scan();
+"273
 [e ( _Key_Scan ..  ]
+"274
+}
+[e :U 553 ]
+[; ;led.c: 274: }
+[; ;led.c: 275: if (gLedPara.mOn) {
+"275
+[e $ ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 554  ]
+{
+[; ;led.c: 276: Led_RunMusic();
+"276
+[e ( _Led_RunMusic ..  ]
 "277
 }
-[e :U 552 ]
-[; ;led.c: 277: }
-[; ;led.c: 278: if (gLedPara.mOn) {
-"278
-[e $ ! != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i 553  ]
-{
-[; ;led.c: 279: Led_RunMusic();
-"279
-[e ( _Led_RunMusic ..  ]
-"280
-}
-[; ;led.c: 280: } else {
-[e $U 554  ]
-[e :U 553 ]
-{
-[; ;led.c: 281: Led_Ramp();
-"281
-[e ( _Led_Ramp ..  ]
-"282
-}
+[; ;led.c: 277: } else {
+[e $U 555  ]
 [e :U 554 ]
-[; ;led.c: 282: }
-[; ;led.c: 283: }
-"283
-[e :UE 551 ]
+{
+[; ;led.c: 278: Led_Ramp();
+"278
+[e ( _Led_Ramp ..  ]
+"279
+}
+[e :U 555 ]
+[; ;led.c: 279: }
+[; ;led.c: 280: }
+"280
+[e :UE 552 ]
 }

@@ -14,22 +14,19 @@ extern "C" {
 
 #include "../../driver/inc/driver.h"
 
-#define FRAME_HEADER        0x7E
-#define FRAME_END           0xEF
-#define CMD_PLAY            0x11
-#define CMD_VOLUME_INC      0x15
-#define CMD_VOLUME_DEC      0x16
-#define CMD_STOP            0x1E
-#define CMD_VOLUME_SET      0x31
-#define CMD_SOUND           0x41
-#define CMD_MODE            0x33
+#define FRAME_HEADER            0x7E
+#define FRAME_END               0xEF
+#define CMD_PLAY                0xAA
+#define CMD_STOP                0xAB
+#define CMD_VOLUME_SET          0xAE
+#define CMD_SOUND               0xA1
+#define CMD_MODE                0xAF
     
-#define PLAY_ALL            0x00
-#define PLAY_FOLDER         0x01
-#define PLAY_SINGLE_CYCLE   0x02
-#define PLAY_RANDOM         0x03
-#define PLAY_SINGLE         0x04
-
+#define PLAY_SINGLE_NOCYCLE     0x00
+#define PLAY_SINGLE_CYCLE       0x01
+#define PLAY_ALL                0x02
+#define PLAY_RANDOM             0x03 
+   
 #define ADCHS_AUDIO         ADCHS_ANC2
     
     extern volatile uint16_t audio_value;

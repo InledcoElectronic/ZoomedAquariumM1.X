@@ -44,15 +44,17 @@ void Led_InitPara() {
 #endif
     gLedRunPara.music_state = 0;
 }
-
-void Led_Initialize() {
-    __delay_ms(480);
+void Audio_Initialize(){
+    __delay_ms(640);
+    CLRWDT();
     Audio_StopSound();
-    __delay_ms(48);
+    __delay_ms(480);
     Audio_SetVolume(gLedPara.mVolOn ? VOLUME[ gLedPara.mVolume ] : 0);
-    __delay_ms(48);
+    __delay_ms(480);
     Audio_SetPlayMode(PLAY_SINGLE_CYCLE);
-    __delay_ms(48);
+    __delay_ms(480);
+}
+void Led_Initialize() {
     if (!gLedPara.mOn) {
         Led_TurnOffRamp();
     } else {
@@ -76,6 +78,7 @@ void Led_Initialize() {
 void Led_SaveParaIfChanged() {
     if (gLedRunPara.mParaChanged) {
         gLedRunPara.mParaChanged = 0;
+        __delay_ms(8);
         FLASH_WriteBlock(LEDPARA_FLASH_ADDR, (uint8_t *) & gLedPara);
     }
 }
@@ -116,7 +119,7 @@ void Led_OnKeyPressed(uint8_t key) {
     switch (key) {
         case KEY_MODE:
             if (gLedPara.mOn) {
-                Audio_StopSound();
+//                Audio_StopSound();
                 gLedPara.mMode++;
                 if (gLedPara.mMode >= MODE_CNT) {
                     gLedPara.mMode = MODE_ALL;
@@ -178,7 +181,7 @@ void Led_OnKeyPressed(uint8_t key) {
         case KEY_VOL_ONOFF:
             if (gLedPara.mOn) {
                 gLedPara.mVolOn = !gLedPara.mVolOn;
-                Audio_SetVolume(gLedPara.mOn ? VOLUME[gLedPara.mVolume] : 0);
+                Audio_SetVolume(gLedPara.mVolOn ? VOLUME[ gLedPara.mVolume ] : 0);
                 gLedRunPara.mParaChanged = 1;
             }
             break;
@@ -242,8 +245,8 @@ void Led_DynamicStorm(uint16_t ptp) {
 void Led_RunMusic() {
     if (gLedRunPara.music_state < 32) {
         gLedRunPara.music_state++;
-    } else if (gLedRunPara.music_state == 32) {
-        Audio_SelectSound(gLedPara.mMode + 1);
+    } else if (gLedRunPara.music_state == 32 ) {
+        Audio_SelectSound(gLedPara.mMode + 0x31);
         gLedRunPara.music_state++;
     } 
     switch (gLedPara.mMode) {

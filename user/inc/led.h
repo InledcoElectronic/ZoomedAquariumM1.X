@@ -63,6 +63,7 @@ extern "C" {
     extern volatile LedRunPara_t gLedRunPara;
 
     extern void Led_InitPara();
+    extern void Audio_Initialize();
     extern void Led_Initialize();
     extern void Led_SaveParaIfChanged();
     extern void Led_UpdateBright();

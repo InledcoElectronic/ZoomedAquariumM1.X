@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production/ZoomedAquariumM1.X.production.hex">
+  <executable name="dist/default/production\ZoomedAquariumM1.X.production.hex">
     <memory name="program">
       <units>words</units>
       <length>4096</length>
-      <used>2668</used>
-      <free>1428</free>
+      <used>2082</used>
+      <free>2014</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>256</length>
-      <used>158</used>
-      <free>98</free>
+      <used>145</used>
+      <free>111</free>
     </memory>
   </executable>
 </project>

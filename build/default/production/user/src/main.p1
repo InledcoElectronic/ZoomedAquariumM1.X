@@ -4,7 +4,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "25
 [v _Interrupt_Initialize `(v ~T0 @X0 0 ef ]
-"341 /Applications/microchip/xc8/v1.40/include/pic16f1508.h
+"341 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
 "351
@@ -18,6 +18,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "65 user/src/../inc/led.h
 [v _Led_InitPara `(v ~T0 @X0 0 ef ]
 "66
+[v _Audio_Initialize `(v ~T0 @X0 0 ef ]
+"67
 [v _Led_Initialize `(v ~T0 @X0 0 ef ]
 "44 user/src/../../driver/inc/tmr2.h
 [v _TMR2_StartTimer `(v ~T0 @X0 0 ef ]
@@ -29,11 +31,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S449 . . array ]
 "62
 [v _gLedPara `VS449 ~T0 @X0 0 e ]
-"42 user/src/../inc/audio.h
+"39 user/src/../inc/audio.h
 [v _Audio_GetValue `(v ~T0 @X0 0 ef ]
-"67 user/src/../inc/led.h
+"68 user/src/../inc/led.h
 [v _Led_SaveParaIfChanged `(v ~T0 @X0 0 ef ]
-"1163 /Applications/microchip/xc8/v1.40/include/pic16f1508.h
+"1163 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [s S71 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S71 . TMR1IE TMR2IE . SSP1IE TXIE RCIE ADIE TMR1GIE ]
 "1162
@@ -53,7 +55,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR2_ISR `(v ~T0 @X0 0 ef ]
 "79 user/src/../../driver/inc/eusart.h
 [v _EUSART_Transmit_ISR `(v ~T0 @X0 0 ef ]
-"1817 /Applications/microchip/xc8/v1.40/include/pic16f1508.h
+"1817 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [v _LATA `Vuc ~T0 @X0 0 e@268 ]
 "1861
 [v _LATB `Vuc ~T0 @X0 0 e@269 ]
@@ -105,12 +107,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v F4301 `(v ~T0 @X0 0 tf ]
 "47 user/src/../../driver/inc/tmr2.h
 [v _TMR2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F4301 ]
-"75 user/src/../inc/led.h
+"76 user/src/../inc/led.h
 [v _Led_Run `(v ~T0 @X0 0 ef ]
-[v F4395 `(v ~T0 @X0 0 tf1`uc ]
+[v F4396 `(v ~T0 @X0 0 tf1`uc ]
 "39 user/src/../inc/key.h
-[v _Key_SetActionHandler `(v ~T0 @X0 0 ef1`*F4395 ]
-"73 user/src/../inc/led.h
+[v _Key_SetActionHandler `(v ~T0 @X0 0 ef1`*F4396 ]
+"74 user/src/../inc/led.h
 [v _Led_OnKeyPressed `(v ~T0 @X0 0 ef1`uc ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdlib.h: 7: typedef unsigned short wchar_t;
@@ -225,7 +227,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;pic16f1508.h: 49: extern volatile unsigned char INDF0 @ 0x000;
-"51 /Applications/microchip/xc8/v1.40/include/pic16f1508.h
+"51 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [; ;pic16f1508.h: 51: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1508.h: 54: typedef union {
@@ -4119,13 +4121,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc.h: 83: extern void ADC_Initialize_Default ();
 [; ;adc.h: 84: extern uint16_t ADC_Conversion ( uint8_t chn );
 [; ;osc.h: 34: extern void OSC_Initialize_Default();
-[; ;audio.h: 35: extern volatile uint16_t audio_value;
-[; ;audio.h: 37: extern void Audio_PlaySound();
-[; ;audio.h: 38: extern void Audio_StopSound();
-[; ;audio.h: 39: extern void Audio_SelectSound(uint8_t index);
-[; ;audio.h: 40: extern void Audio_SetPlayMode(uint8_t type);
-[; ;audio.h: 41: extern void Audio_SetVolume(uint8_t vol);
-[; ;audio.h: 42: extern void Audio_GetValue();
+[; ;audio.h: 32: extern volatile uint16_t audio_value;
+[; ;audio.h: 34: extern void Audio_PlaySound();
+[; ;audio.h: 35: extern void Audio_StopSound();
+[; ;audio.h: 36: extern void Audio_SelectSound(uint8_t index);
+[; ;audio.h: 37: extern void Audio_SetPlayMode(uint8_t type);
+[; ;audio.h: 38: extern void Audio_SetVolume(uint8_t vol);
+[; ;audio.h: 39: extern void Audio_GetValue();
 [; ;led.h: 39: typedef union {
 [; ;led.h: 41: struct {
 [; ;led.h: 42: unsigned mOn : 1;
@@ -4148,16 +4150,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;led.h: 62: extern volatile LedPara_t gLedPara;
 [; ;led.h: 63: extern volatile LedRunPara_t gLedRunPara;
 [; ;led.h: 65: extern void Led_InitPara();
-[; ;led.h: 66: extern void Led_Initialize();
-[; ;led.h: 67: extern void Led_SaveParaIfChanged();
-[; ;led.h: 68: extern void Led_UpdateBright();
-[; ;led.h: 69: extern void Led_TurnOnAllRamp();
-[; ;led.h: 70: extern void Led_TurnOnWhiteRamp();
-[; ;led.h: 71: extern void Led_TurnOnBlueRamp();
-[; ;led.h: 72: extern void Led_TurnOffRamp();
-[; ;led.h: 73: extern void Led_OnKeyPressed(uint8_t key);
-[; ;led.h: 74: extern void Led_Ramp();
-[; ;led.h: 75: extern void Led_Run();
+[; ;led.h: 66: extern void Audio_Initialize();
+[; ;led.h: 67: extern void Led_Initialize();
+[; ;led.h: 68: extern void Led_SaveParaIfChanged();
+[; ;led.h: 69: extern void Led_UpdateBright();
+[; ;led.h: 70: extern void Led_TurnOnAllRamp();
+[; ;led.h: 71: extern void Led_TurnOnWhiteRamp();
+[; ;led.h: 72: extern void Led_TurnOnBlueRamp();
+[; ;led.h: 73: extern void Led_TurnOffRamp();
+[; ;led.h: 74: extern void Led_OnKeyPressed(uint8_t key);
+[; ;led.h: 75: extern void Led_Ramp();
+[; ;led.h: 76: extern void Led_Run();
 [; ;key.h: 33: typedef void (*Key_Press_t)( uint8_t key );
 [; ;key.h: 34: typedef void (*Key_Idle_t)();
 [; ;key.h: 36: extern volatile uint8_t keyValue;
@@ -4215,173 +4218,176 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 32: Led_InitPara();
 "32
 [e ( _Led_InitPara ..  ]
-[; ;main.c: 33: Led_Initialize();
+[; ;main.c: 33: Audio_Initialize();
 "33
-[e ( _Led_Initialize ..  ]
-[; ;main.c: 34: TMR2_StartTimer();
+[e ( _Audio_Initialize ..  ]
+[; ;main.c: 34: Led_Initialize();
 "34
+[e ( _Led_Initialize ..  ]
+[; ;main.c: 35: TMR2_StartTimer();
+"35
 [e ( _TMR2_StartTimer ..  ]
-[; ;main.c: 36: while (1) {
-"36
+[; ;main.c: 37: while (1) {
+"37
 [e :U 454 ]
 {
-[; ;main.c: 37: asm("clrwdt");
-"37
+[; ;main.c: 38: asm("clrwdt");
+"38
 [; <" clrwdt ;# ">
-[; ;main.c: 39: if (gLedPara.mOn && (gLedPara.mMode == 3 || gLedPara.mMode == 4)) {
-"39
+[; ;main.c: 40: if (gLedPara.mOn && (gLedPara.mMode == 3 || gLedPara.mMode == 4)) {
+"40
 [e $ ! && != -> . . _gLedPara 0 0 `i -> -> -> 0 `i `Vuc `i || == -> . . _gLedPara 0 1 `i -> 3 `i == -> . . _gLedPara 0 1 `i -> 4 `i 456  ]
 {
-[; ;main.c: 40: Audio_GetValue();
-"40
-[e ( _Audio_GetValue ..  ]
+[; ;main.c: 41: Audio_GetValue();
 "41
+[e ( _Audio_GetValue ..  ]
+"42
 }
 [e :U 456 ]
-[; ;main.c: 41: }
-[; ;main.c: 42: Led_SaveParaIfChanged();
-"42
-[e ( _Led_SaveParaIfChanged ..  ]
+[; ;main.c: 42: }
+[; ;main.c: 43: Led_SaveParaIfChanged();
 "43
+[e ( _Led_SaveParaIfChanged ..  ]
+"44
 }
 [e :U 453 ]
-"36
+"37
 [e $U 454  ]
 [e :U 455 ]
-[; ;main.c: 43: }
 [; ;main.c: 44: }
-"44
+[; ;main.c: 45: }
+"45
 [e :UE 452 ]
 }
-[v F4409 `(v ~T0 @X0 1 tf ]
-"46
-[v _ISR `IF4409 ~T0 @X0 1 e ]
+[v F4410 `(v ~T0 @X0 1 tf ]
+"47
+[v _ISR `IF4410 ~T0 @X0 1 e ]
 {
-[; ;main.c: 46: void interrupt ISR() {
+[; ;main.c: 47: void interrupt ISR() {
 [e :U _ISR ]
 [f ]
-[; ;main.c: 47: if (PIE1bits.TMR2IE && PIR1bits.TMR2IF) {
-"47
+[; ;main.c: 48: if (PIE1bits.TMR2IE && PIR1bits.TMR2IF) {
+"48
 [e $ ! && != -> . . _PIE1bits 0 1 `i -> -> -> 0 `i `Vuc `i != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 458  ]
 {
-[; ;main.c: 48: TMR2_ISR();
-"48
-[e ( _TMR2_ISR ..  ]
+[; ;main.c: 49: TMR2_ISR();
 "49
+[e ( _TMR2_ISR ..  ]
+"50
 }
-[; ;main.c: 49: } else if (PIE1bits.TXIE && PIR1bits.TXIF) {
+[; ;main.c: 50: } else if (PIE1bits.TXIE && PIR1bits.TXIF) {
 [e $U 459  ]
 [e :U 458 ]
 [e $ ! && != -> . . _PIE1bits 0 4 `i -> -> -> 0 `i `Vuc `i != -> . . _PIR1bits 0 4 `i -> -> -> 0 `i `Vuc `i 460  ]
 {
-[; ;main.c: 50: EUSART_Transmit_ISR();
-"50
-[e ( _EUSART_Transmit_ISR ..  ]
+[; ;main.c: 51: EUSART_Transmit_ISR();
 "51
+[e ( _EUSART_Transmit_ISR ..  ]
+"52
 }
 [e :U 460 ]
-"52
+"53
 [e :U 459 ]
-[; ;main.c: 51: }
 [; ;main.c: 52: }
+[; ;main.c: 53: }
 [e :UE 457 ]
 }
-"54
+"55
 [v _PIN_Initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 54: void PIN_Initialize() {
+[; ;main.c: 55: void PIN_Initialize() {
 [e :U _PIN_Initialize ]
 [f ]
-[; ;main.c: 56: LATA = 0x00;
-"56
-[e = _LATA -> -> 0 `i `uc ]
-[; ;main.c: 57: LATB = 0x80;
+[; ;main.c: 57: LATA = 0x00;
 "57
-[e = _LATB -> -> 128 `i `uc ]
-[; ;main.c: 58: LATC = 0x00;
+[e = _LATA -> -> 0 `i `uc ]
+[; ;main.c: 58: LATB = 0x80;
 "58
+[e = _LATB -> -> 128 `i `uc ]
+[; ;main.c: 59: LATC = 0x00;
+"59
 [e = _LATC -> -> 0 `i `uc ]
-[; ;main.c: 60: TRISA = 0x30;
-"60
-[e = _TRISA -> -> 48 `i `uc ]
-[; ;main.c: 61: TRISB = 0x60;
+[; ;main.c: 61: TRISA = 0x30;
 "61
-[e = _TRISB -> -> 96 `i `uc ]
-[; ;main.c: 62: TRISC = 0x05;
+[e = _TRISA -> -> 48 `i `uc ]
+[; ;main.c: 62: TRISB = 0x60;
 "62
+[e = _TRISB -> -> 96 `i `uc ]
+[; ;main.c: 63: TRISC = 0x05;
+"63
 [e = _TRISC -> -> 5 `i `uc ]
-[; ;main.c: 64: ANSELC = 0x05;
-"64
-[e = _ANSELC -> -> 5 `i `uc ]
-[; ;main.c: 65: ANSELB = 0x00;
+[; ;main.c: 65: ANSELC = 0x05;
 "65
-[e = _ANSELB -> -> 0 `i `uc ]
-[; ;main.c: 66: ANSELA = 0x00;
+[e = _ANSELC -> -> 5 `i `uc ]
+[; ;main.c: 66: ANSELB = 0x00;
 "66
+[e = _ANSELB -> -> 0 `i `uc ]
+[; ;main.c: 67: ANSELA = 0x00;
+"67
 [e = _ANSELA -> -> 0 `i `uc ]
-[; ;main.c: 68: WPUB = 0x60;
-"68
-[e = _WPUB -> -> 96 `i `uc ]
-[; ;main.c: 69: WPUA = 0x00;
+[; ;main.c: 69: WPUB = 0x60;
 "69
-[e = _WPUA -> -> 0 `i `uc ]
-[; ;main.c: 70: OPTION_REGbits.nWPUEN = 0;
+[e = _WPUB -> -> 96 `i `uc ]
+[; ;main.c: 70: WPUA = 0x00;
 "70
-[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 71: }
+[e = _WPUA -> -> 0 `i `uc ]
+[; ;main.c: 71: OPTION_REGbits.nWPUEN = 0;
 "71
+[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 72: }
+"72
 [e :UE 461 ]
 }
-"73
+"74
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 73: void SYSTEM_Initialize() {
+[; ;main.c: 74: void SYSTEM_Initialize() {
 [e :U _SYSTEM_Initialize ]
 [f ]
-[; ;main.c: 75: PIN_Initialize();
-"75
-[e ( _PIN_Initialize ..  ]
-[; ;main.c: 76: OSC_Initialize_Default();
+[; ;main.c: 76: PIN_Initialize();
 "76
-[e ( _OSC_Initialize_Default ..  ]
-[; ;main.c: 77: TMR2_Initialize_Default();
+[e ( _PIN_Initialize ..  ]
+[; ;main.c: 77: OSC_Initialize_Default();
 "77
-[e ( _TMR2_Initialize_Default ..  ]
-[; ;main.c: 78: PWM1_Initialize();
+[e ( _OSC_Initialize_Default ..  ]
+[; ;main.c: 78: TMR2_Initialize_Default();
 "78
-[e ( _PWM1_Initialize ..  ]
-[; ;main.c: 79: PWM2_Initialize();
+[e ( _TMR2_Initialize_Default ..  ]
+[; ;main.c: 79: PWM1_Initialize();
 "79
-[e ( _PWM2_Initialize ..  ]
-[; ;main.c: 80: PWM3_Initialize();
+[e ( _PWM1_Initialize ..  ]
+[; ;main.c: 80: PWM2_Initialize();
 "80
-[e ( _PWM3_Initialize ..  ]
-[; ;main.c: 81: PWM4_Initialize();
+[e ( _PWM2_Initialize ..  ]
+[; ;main.c: 81: PWM3_Initialize();
 "81
-[e ( _PWM4_Initialize ..  ]
-[; ;main.c: 82: EUSART_Initialize_Default();
+[e ( _PWM3_Initialize ..  ]
+[; ;main.c: 82: PWM4_Initialize();
 "82
-[e ( _EUSART_Initialize_Default ..  ]
-[; ;main.c: 83: ADC_Initialize_Default();
+[e ( _PWM4_Initialize ..  ]
+[; ;main.c: 83: EUSART_Initialize_Default();
 "83
-[e ( _ADC_Initialize_Default ..  ]
-[; ;main.c: 84: }
+[e ( _EUSART_Initialize_Default ..  ]
+[; ;main.c: 84: ADC_Initialize_Default();
 "84
+[e ( _ADC_Initialize_Default ..  ]
+[; ;main.c: 85: }
+"85
 [e :UE 462 ]
 }
-"86
+"87
 [v _Interrupt_Initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 86: void Interrupt_Initialize() {
+[; ;main.c: 87: void Interrupt_Initialize() {
 [e :U _Interrupt_Initialize ]
 [f ]
-[; ;main.c: 87: TMR2_SetInterruptHandler(Led_Run);
-"87
-[e ( _TMR2_SetInterruptHandler (1 &U _Led_Run ]
-[; ;main.c: 88: Key_SetActionHandler(Led_OnKeyPressed);
+[; ;main.c: 88: TMR2_SetInterruptHandler(Led_Run);
 "88
-[e ( _Key_SetActionHandler (1 &U _Led_OnKeyPressed ]
-[; ;main.c: 89: }
+[e ( _TMR2_SetInterruptHandler (1 &U _Led_Run ]
+[; ;main.c: 89: Key_SetActionHandler(Led_OnKeyPressed);
 "89
+[e ( _Key_SetActionHandler (1 &U _Led_OnKeyPressed ]
+[; ;main.c: 90: }
+"90
 [e :UE 463 ]
 }

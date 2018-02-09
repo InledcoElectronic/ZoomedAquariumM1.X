@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"1645 /Applications/microchip/xc8/v1.40/include/pic16f1508.h
+"1645 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
 "1724
 [v _ADCON1 `Vuc ~T0 @X0 0 e@158 ]
@@ -22,10 +22,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 "1670
 [v _ADCON0bits `VS93 ~T0 @X0 0 e@157 ]
 [v F4267 `(v ~T0 @X0 1 tf1`ul ]
-"152 /Applications/microchip/xc8/v1.40/include/pic.h
+"152 D:\Program Files\Microchip\xc8\v1.41\include\pic.h
 [v __delay `JF4267 ~T0 @X0 0 e ]
 [p i __delay ]
-"566 /Applications/microchip/xc8/v1.40/include/pic16f1508.h
+"566 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [s S40 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S40 . TMR1IF TMR2IF . SSP1IF TXIF RCIF ADIF TMR1GIF ]
 "565
@@ -146,7 +146,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;pic16f1508.h: 49: extern volatile unsigned char INDF0 @ 0x000;
-"51 /Applications/microchip/xc8/v1.40/include/pic16f1508.h
+"51 D:\Program Files\Microchip\xc8\v1.41\include\pic16f1508.h
 [; ;pic16f1508.h: 51: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1508.h: 54: typedef union {
